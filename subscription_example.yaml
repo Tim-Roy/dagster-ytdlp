@@ -1,0 +1,10 @@
+myfolder:
+
+  Dagster:
+    url: https://www.youtube.com/@dagsterio/videos
+    ephemeral: true # will delete from library after 90 days
+
+  Dagster Demos Playlist:
+    url: https://www.youtube.com/playlist?list=PLJPgfrjmzQFMpHwkL6VrIQ27fLV-275en
+    best_format: true # use best available format instead of default
+    use_playlist_index: true # use playlist index for episode numbers (instead of MMDD)

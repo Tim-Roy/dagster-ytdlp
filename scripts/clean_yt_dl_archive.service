@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily archive data backups & clean docker
+Wants=dagster_clean.timer
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/lib/clean_yt_dl_archive.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,23 @@
+services:
+  dagster_ytdlp:
+    build:
+      context: .
+    container_name: dagster_ytdlp
+    image: dagster_ytdlp_image
+    restart: always
+    networks:
+      - dagster_network
+    volumes:
+      - $YT_DOWNLOADS_PATH:/mount/Downloads
+      - $YT_SUBS_PATH:/mount/yt-subs.yaml
+      - $LOG_HOME:/mount/Logs
+    environment:
+      DAGSTER_CURRENT_IMAGE: dagster_ytdlp_image
+    env_file:
+      - .env
+
+networks:
+  dagster_network:
+    driver: bridge
+    name: dagster_network
+    external: true

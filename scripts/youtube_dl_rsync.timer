@@ -1,0 +1,10 @@
+[Unit]
+Description=rsync YouTube download timer
+Requires=youtube_dl_rsync.service
+
+[Timer]
+OnCalendar=*:0,15,30,45
+Unit=youtube_dl_rsync.service
+
+[Install]
+WantedBy=timers.target

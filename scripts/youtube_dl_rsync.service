@@ -1,0 +1,10 @@
+[Unit]
+Description=rsync YouTube downloads to NAS
+Wants=youtube_dl_rsync.timer
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/lib/youtube_dl_rsync.sh
+
+[Install]
+WantedBy=default.target

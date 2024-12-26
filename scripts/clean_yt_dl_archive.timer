@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily archive data backups & clean docker schedule
+
+[Timer]
+Unit=clean_yt_dl_archive.service
+OnCalendar=*-*-* 00:03:00
+
+[Install]
+WantedBy=timers.target
